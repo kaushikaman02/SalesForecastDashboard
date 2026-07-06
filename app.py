@@ -72,7 +72,7 @@ if page == "Sales Overview":
     # Monthly Sales
     monthly = (
         filtered
-        .groupby(pd.Grouper(key="Order Date", freq="M"))["Sales"]
+        .groupby(pd.Grouper(key="Order Date", freq="ME"))["Sales"]
         .sum()
         .reset_index()
     )
